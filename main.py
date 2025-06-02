@@ -56,8 +56,9 @@ try:
     msg["From"] = email_sender
     msg["To"] = "AlanC25@ArielPremium.com"
     print(f"Email recipient: {msg['To']}")
-    msg["Subject"] = "Daily SQL Report"
-    msg.set_content("Hi,\n\nPlease find attached today's report.\n\nBest regards.")
+    msg["Subject"] = "Daily SQL Report - " + datetime.now().strftime("%Y-%m-%d")
+    Today = datetime.now().strftime("%Y-%m-%d")
+    msg.set_content(f"Hi,\n\nPlease find attached {Today}'s report.\n\nBest regards.")
 
     file_paths = ["Output_CSV/OrderInformationQuery.csv","Output_CSV/ProductInformationQuery.csv"]
     # Attach the file

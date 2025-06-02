@@ -3,7 +3,7 @@ This script fetches data from a SQL Server view and emails it as an Excel report
 
 ---
 
-##Configuration: secrets.json
+## Configuration: secrets.json
 Before running the script, create a file named secrets.json in the same directory with the following structure:
 
 ```
@@ -23,6 +23,11 @@ https://support.google.com/accounts/answer/185833?hl=en
 
 ---
 
+## Create a Virtual Env (Optional but Recommended)
+To reduce the size of the .exe when packaging.
+
+---
+
 ## Setup & Packaging (Optional but Recommended)
 To convert the script into a standalone .exe:
 
@@ -35,7 +40,7 @@ pip install pyinstaller
 2. Build the executable:
 
 ```
-pyinstaller --onefile main.py
+python -m PyInstaller --onefile main.py
 ```
 
 3. After the build completes, your .exe file will be located in the dist/ directory:
@@ -63,6 +68,8 @@ To run your .exe file automatically every day:
 
 6. Browse to select the compiled main.exe file.
 
-7. Finish and test the task.
+7. Edit your action and set the "Start in (optional)" field to the directory containing your main.exe. For example: C:\Users\xxx\auto-invoice-checker\dist
+
+8. Finish and test the task.
 
 Your script will now run automatically every day and send the report via email.
