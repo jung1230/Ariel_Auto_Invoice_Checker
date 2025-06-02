@@ -1,7 +1,7 @@
 # Daily SQL Report Automation
 This script fetches data from a SQL Server view and emails it as an Excel report daily — without needing Excel installed.
 
----
+
 
 ## Configuration: secrets.json
 Before running the script, create a file named secrets.json in the same directory with the following structure:
@@ -21,12 +21,12 @@ Before running the script, create a file named secrets.json in the same director
 If your email account uses two-factor authentication (2FA), you must use an application-specific password instead of your regular login password.
 https://support.google.com/accounts/answer/185833?hl=en
 
----
+
 
 ## Create a Virtual Env (Optional but Recommended)
 To reduce the size of the .exe when packaging.
 
----
+
 
 ## Setup & Packaging (Optional but Recommended)
 To convert the script into a standalone .exe:
@@ -51,7 +51,7 @@ dist/
 ```
 4. Move secrets.json into the same folder as main.exe.
 
----
+
 
 ## Automate with Windows Task Scheduler
 To run your .exe file automatically every day:
