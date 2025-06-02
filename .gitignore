@@ -1,2 +1,6 @@
 Output_CSV
 secrets.json
+build
+dist
+*.spec
+*.log
