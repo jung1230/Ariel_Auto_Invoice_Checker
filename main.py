@@ -36,8 +36,6 @@ try:
     query1 = "SELECT * FROM dbo.OrderInformationQuery"
     query2 = "SELECT * FROM dbo.ProductInformationQuery"
 
-
-    conn = pyodbc.connect(conn_str)
     df1 = pd.read_sql(query1, conn)
     df2 = pd.read_sql(query2, conn)
     # print(df1.head())
